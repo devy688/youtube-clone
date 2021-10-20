@@ -8,6 +8,24 @@ const API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
 function App() {
   const [videos, setVideos] = useState([]);
 
+  const search = (query) => {
+    const requestOptions = {
+      method: "GET",
+      redirect: "follow",
+    };
+
+    fetch(
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${query}&type=video&key=${API_KEY}`,
+      requestOptions
+    )
+      .then((response) => response.json())
+      .then((result) =>
+        result.items.map((item) => ({ ...item, id: item.id.videoId }))
+      )
+      .then((items) => setVideos(items))
+      .catch((error) => console.log("error", error));
+  };
+
   /* useEffect */
   // dependency array를 생략하면 state나 props이 업데이트 될 때마다 등록한 콜백함수를 호출
   // 빈 배열을 등록해두면 한 번만, 마운트 되었을 때 호출
@@ -27,12 +45,10 @@ function App() {
   }, []);
 
   return (
-    <>
-      <div className={styles.app}>
-        <SearchHeader />
-        <VideoList videos={videos} />
-      </div>
-    </>
+    <div className={styles.app}>
+      <SearchHeader onSearch={search} />
+      <VideoList videos={videos} />
+    </div>
   );
 }
 
