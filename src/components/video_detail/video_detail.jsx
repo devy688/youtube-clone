@@ -1,5 +1,5 @@
 import React from "react";
 
-const VideoDetail = (props) => <h2>VideoDetail</h2>;
+const VideoDetail = ({ video }) => <h1>{video.snippet.title}</h1>;
 
 export default VideoDetail;
