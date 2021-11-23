@@ -16,7 +16,7 @@ Demo Link => https://devy688.github.io/youtube-clone/
 
 ## 📼 Tech Stack
 
-<img alt="HTML5" src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/> <img alt="CSS3" src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/><img alt="JavaScript" src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/><img alt="React" src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/><img alt="Postman" src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=red" />
+<img alt="HTML5" src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/> <img alt="CSS3" src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/><img alt="JavaScript" src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/><img alt="React" src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/><img alt="Youtube_API" src="https://img.shields.io/badge/Youtube_API-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white"> <img alt="Postman" src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=red" />
 
 <br>
 
@@ -38,17 +38,17 @@ Demo Link => https://devy688.github.io/youtube-clone/
 
 ## 📝 What I Learned
 
-```javascript
 - How to use Hooks API
 - How to use PostCSS
 - How to use Youtube API and Postman
 - Difference between fetch web API and axios
-```
 
 <br>
 
 ## 👩‍💻 What I want to update
 
 - [ ] Publishing
+- [ ] Routing
 - [ ] After search, Retrieve full video data
 - [ ] Retrieve channel data
+- [ ] Add architecture at README
