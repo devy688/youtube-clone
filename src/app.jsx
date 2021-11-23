@@ -36,10 +36,10 @@ function App({ youtube }) {
     <div className={styles.app}>
       <SearchHeader onSearch={search} />
       <div className={styles.main}>
+        <nav className={styles.navbar}>
+          <NavBar></NavBar>
+        </nav>
         <section className={styles.content}>
-          <nav className={styles.navbar}>
-            <NavBar></NavBar>
-          </nav>
           {selectedVideo && (
             <div className={styles.detail}>
               <VideoDetail video={selectedVideo} />

@@ -1,7 +1,7 @@
-import React from "react";
+import React, { memo } from "react";
 import styles from "./nav_bar.module.css";
 
-const NavBar = (props) => (
+const NavBar = memo((props) => (
   <>
     <div className={styles.menu}>
       <i className="fas fa-home"></i>
@@ -16,6 +16,6 @@ const NavBar = (props) => (
       <span className={styles.name}>구독</span>
     </div>
   </>
-);
+));
 
 export default NavBar;

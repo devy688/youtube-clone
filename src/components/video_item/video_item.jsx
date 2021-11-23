@@ -5,19 +5,23 @@ const VideoItem = memo(
   ({ video, video: { snippet }, onVideoClick, display }) => {
     const displayType = display === "list" ? styles.list : styles.grid;
     return (
-      <li
-        className={`${styles.container} ${displayType}`}
-        onClick={() => onVideoClick(video)}
-      >
+      <li className={`${styles.container} ${displayType}`}>
         <div className={styles.video}>
-          <img
-            className={styles.thumbnails}
-            src={snippet.thumbnails.medium.url}
-            alt="video thumbnail"
-          />
+          <div className={styles["thumbnails-wrap"]}>
+            <img
+              className={styles.thumbnails}
+              src={snippet.thumbnails.medium.url}
+              alt="video thumbnail"
+              onClick={() => onVideoClick(video)}
+            />
+          </div>
           <div className={styles.metadata}>
-            <p className={styles.title}>{snippet.title}</p>
-            <p className={styles.channelTitle}>{snippet.channelTitle}</p>
+            <div className={styles.info}>
+              <p className={styles.title} onClick={() => onVideoClick(video)}>
+                {snippet.title}
+              </p>
+              <p className={styles["channel-title"]}>{snippet.channelTitle}</p>
+            </div>
           </div>
         </div>
       </li>
