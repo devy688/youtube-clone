@@ -1,9 +1,8 @@
 import SearchHeader from "./components/search_header/search_header";
-import VideoList from "./components/video_list/video_list";
+import NavBar from "./components/nav_bar/nav_bar";
+import Main from "./components/main/main";
 import styles from "./app.module.css";
 import { useCallback, useEffect, useState } from "react";
-import VideoDetail from "./components/video_detail/video_detail";
-import NavBar from "./components/nav_bar/nav_bar";
 
 function App({ youtube }) {
   const [videos, setVideos] = useState([]);
@@ -35,25 +34,14 @@ function App({ youtube }) {
   return (
     <div className={styles.app}>
       <SearchHeader onSearch={search} />
-      <div className={styles.main}>
-        <nav className={styles.navbar}>
-          <NavBar></NavBar>
-        </nav>
-        <section className={styles.content}>
-          {selectedVideo && (
-            <div className={styles.detail}>
-              <VideoDetail video={selectedVideo} />
-            </div>
-          )}
-          <div className={styles.list}>
-            <VideoList
-              videos={videos}
-              onVideoClick={selectVideo}
-              display={selectedVideo ? "list" : "grid"}
-            />
-          </div>
-        </section>
-      </div>
+      <nav className={styles.navbar}>
+        <NavBar />
+      </nav>
+      <Main
+        videos={videos}
+        selectedVideo={selectedVideo}
+        selectVideo={selectVideo}
+      />
     </div>
   );
 }

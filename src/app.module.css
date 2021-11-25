@@ -3,27 +3,9 @@
 }
 
 .navbar {
-  padding: 0 1em;
-}
-
-.main {
-  display: flex;
-}
-
-.content {
-  display: flex;
-}
-
-.detail {
-  flex: 1 1 65%;
-}
-
-.list {
-  flex: 1 1 25%;
-}
-
-@media screen and (max-width: 48rem) {
-  .content {
-    flex-direction: column;
-  }
+  background-color: #212121;
+  position: fixed;
+  width: 4em;
+  height: 100%;
+  margin-top: 4rem;
 }

@@ -16,6 +16,11 @@ const VideoItem = memo(
             />
           </div>
           <div className={styles.metadata}>
+            <img
+              className={styles["channel-img"]}
+              src={video.channelImgURL}
+              alt="channel-thumbnails"
+            />
             <div className={styles.info}>
               <p className={styles.title} onClick={() => onVideoClick(video)}>
                 {snippet.title}

@@ -2,8 +2,16 @@
   padding: 0.5em;
 }
 
+/* 
+   비디오 리스트 row당 갯수..
+   1600px ~ : 비디오 5개씩
+   1100 ~ 1600px: 비디오 4개씩
+   900 ~ 1100px: 비디오 3개씩
+   0 ~ 900px: 비디오 2개씩
+*/
+
 .container.grid {
-  width: 25%;
+  width: 20%;
 }
 
 .container.list {
@@ -31,16 +39,30 @@
   cursor: pointer;
 }
 
+.thumbnail {
+  width: 100px;
+  height: 50%;
+}
+
 .metadata {
   width: 100%;
   display: flex;
   margin-bottom: 0.7em;
 }
 
+.channel-img {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background-color: white;
+  margin-top: 0.2em;
+}
+
 .info {
   display: flex;
   flex-direction: column;
   flex-basis: 80%;
+  padding-left: 10px;
 }
 
 .title {
@@ -52,6 +74,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: normal;
+  /* height: 3em; */
   text-align: left;
   word-wrap: normal;
   display: -webkit-box;
@@ -59,13 +82,30 @@
   -webkit-box-orient: vertical;
 }
 
-.channel-title {
+.channel-title,
+.views,
+.date {
   color: gray;
   font-size: 0.7rem;
   margin: 0;
 }
 
-@media screen and (max-width: 56rem) {
+.sub-info {
+  display: flex;
+}
+
+.views::after {
+  content: "•";
+  margin: 0 4px;
+}
+
+@media screen and (max-width: 70rem) {
+  .container.grid {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 60rem) {
   .container.grid {
     width: 33%;
   }

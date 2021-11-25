@@ -1,6 +1,7 @@
 .detail {
   color: white;
   padding: 0.2em;
+  transform: translate(4em);
 }
 
 .info::after {
