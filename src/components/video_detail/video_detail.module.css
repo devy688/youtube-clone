@@ -1,8 +1,7 @@
 .detail {
   width: 100%;
   color: white;
-  padding-top: 4em;
-  padding-left: 4em;
+  padding: 4em 1em 0 5em;
 }
 
 .video {

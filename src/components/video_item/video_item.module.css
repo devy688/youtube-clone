@@ -38,7 +38,7 @@
 
 /* list */
 .list.container {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -137,5 +137,11 @@
 @media screen and (max-width: 25rem) {
   .container.grid {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 56rem) {
+  .list.container {
+    margin: 0 4em;
   }
 }
