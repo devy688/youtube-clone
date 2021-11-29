@@ -1,7 +1,12 @@
 .detail {
+  width: 100%;
   color: white;
-  padding: 0.2em;
-  transform: translate(4em);
+  padding-top: 4em;
+  padding-left: 4em;
+}
+
+.video {
+  width: 100%;
 }
 
 .info::after {
@@ -16,4 +21,5 @@
 
 .description {
   white-space: pre-wrap;
+  margin-top: 2em;
 }

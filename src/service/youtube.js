@@ -1,10 +1,11 @@
 class Youtube {
   constructor(httpClient) {
     this.youtube = httpClient;
-    this.videoList = [];
   }
 
   async mostPopular() {
+    const promises = [];
+
     const response = await this.youtube.get("videos", {
       params: {
         part: "snippet",
@@ -14,18 +15,19 @@ class Youtube {
     });
 
     await response.data.items.map((item) =>
-      this.getChannelInfo(item.snippet.channelId).then((imageURL) =>
-        this.videoList.push({
-          ...item,
-          channelImgURL: imageURL,
-        })
+      promises.push(
+        this.getChannelImg(item.snippet.channelId).then(
+          (channelImgURL) => (item.channelImgURL = channelImgURL)
+        )
       )
     );
 
-    return this.videoList;
+    await Promise.all(promises);
+
+    return response.data.items;
   }
 
-  async getChannelInfo(channelId) {
+  async getChannelImg(channelId) {
     const response = await this.youtube.get("channels", {
       params: {
         part: "snippet",
@@ -37,6 +39,8 @@ class Youtube {
   }
 
   async search(query) {
+    const promises = [];
+
     const response = await this.youtube.get("search", {
       params: {
         part: "snippet",
@@ -46,10 +50,31 @@ class Youtube {
       },
     });
 
-    return response.data.items.map((item) => ({
+    await response.data.items.map((item) =>
+      promises.push(
+        this.getChannelImg(item.snippet.channelId).then(
+          (channelImgURL) => (item.channelImgURL = channelImgURL)
+        )
+      )
+    );
+
+    await Promise.all(promises);
+
+    return await response.data.items.map((item) => ({
       ...item,
       id: item.id.videoId,
     }));
+  }
+
+  async getVideoDetail(videoId) {
+    const response = await this.youtube.get("videos", {
+      params: {
+        id: videoId,
+        part: "snippet",
+      },
+    });
+
+    return response.data.items[0];
   }
 }
 

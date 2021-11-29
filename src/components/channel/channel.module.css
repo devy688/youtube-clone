@@ -1,0 +1,19 @@
+.channel {
+  display: flex;
+  padding-top: 1.5em;
+}
+
+.img {
+  background-color: white;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+}
+
+.info {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 0.8em;
+}

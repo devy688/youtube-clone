@@ -1,11 +1,14 @@
 import React, { memo, useRef } from "react";
+import { useHistory } from "react-router-dom";
 import styles from "./search_header.module.css";
 
-const SearchHeader = memo(({ onSearch }) => {
+const SearchHeader = memo(({ onSearch, setSelectedVideo }) => {
   const inputRef = useRef();
+  const history = useHistory();
+
   const handleSearch = () => {
-    const value = inputRef.current.value;
-    onSearch(value);
+    onSearch(inputRef.current.value);
+    history.push("/search");
   };
 
   const onClick = () => {
@@ -20,27 +23,31 @@ const SearchHeader = memo(({ onSearch }) => {
 
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>
+      <div className={styles.start}>
         <div className={styles.menu}>
           <i className="fas fa-bars"></i>
         </div>
-        <div className={styles["logo__icon"]}>
-          <img className={styles.img} src="images/logo.png" alt="logo" />
+        <a className={styles.logo} href="/youtube-clone">
+          <img
+            className={styles.img}
+            src="/youtube-clone/images/logo.png"
+            alt="logo"
+          />
           <h1 className={styles.title}>Youtube</h1>
-        </div>
+        </a>
       </div>
       <div className={styles.search}>
         <input
           ref={inputRef}
           className={styles.input}
           type="search"
-          placeholder="Search..."
+          placeholder="Search"
           onKeyPress={onKeyPress}
         ></input>
         <button type="submit" className={styles.button} onClick={onClick}>
           <img
             className={styles.buttonImg}
-            src="images/search.png"
+            src="/youtube-clone/images/search.png"
             alt="search"
           />
         </button>
