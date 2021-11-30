@@ -20,19 +20,27 @@ Demo Link => https://devy688.github.io/youtube-clone/
 
 <br>
 
+## 🎬 Over View
+
+<div style="width:700px;background-color:white;">
+<img src="https://user-images.githubusercontent.com/91401462/144062289-7880778c-82f1-46b3-a1be-3fafd47b1ec1.png" style="background-color:transparent; padding:15px 30px; width: 640px">
+</div>
+
+<br>
+
 ## 💻 About Project
 
 ### 1. Home ( most popular videos )
 
-<img src="https://user-images.githubusercontent.com/91401462/142982076-b9035b19-2abb-4061-a16c-33a479dafb2e.png" style="width:600px;height:450px" />
+<img src="https://user-images.githubusercontent.com/91401462/143881872-8396bb02-e1d4-4c13-877a-2ab855260f67.png" style="width:700px;height:450px" />
 
 ### 2. Video Detail
 
-<img src="https://user-images.githubusercontent.com/91401462/142982098-bec5deee-6e1e-465e-8e36-657e9d7290da.png" style="width:600px;height:450px" />
+<img src="https://user-images.githubusercontent.com/91401462/143881886-be4ecb91-1444-4b49-9437-50e133c36fab.png" style="width:700px;height:450px" />
 
 ### 3. Search
 
-<img src="https://user-images.githubusercontent.com/91401462/142982112-cbb1f408-aabf-4ef4-b0e4-ab21894aa7c6.png" style="width:600px;height:450px" />
+<img src="https://user-images.githubusercontent.com/91401462/143881906-247a5e0b-0e73-4a64-bc93-ca91db9ee9a7.png" style="width:700px;height:450px" />
 
 <br>
 
